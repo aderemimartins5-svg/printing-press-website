@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OceanGraphics — Printing &amp; Branding in Lagos</title>
+<meta name="description" content="OceanGraphics is a Lagos-based printing and branding company. Large format printing, I.D card printing, UV printing, signage, stickers, flyers and corporate branding.">
+<meta name="theme-color" content="#0A1C2E">
+<meta property="og:title" content="OceanGraphics — Printing &amp; Branding in Lagos">
+<meta property="og:description" content="Professional printing and branding solutions for businesses, organizations and individuals.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "OceanGraphics",
+  "description": "Printing, large format printing and branding company in Lagos, Nigeria.",
+  "address": {"@type": "PostalAddress", "addressLocality": "Lagos", "addressCountry": "NG"},
+  "telephone": "+2348000000000",
+  "openingHours": "Mo-Fr 08:00-18:00, Sa 09:00-16:00"
+}
+</script>
+<style>
+:root{
+  --navy:#0A1C2E;
+  --navy-soft:#122B44;
+  --charcoal:#2B3440;
+  --ink:#1B2533;
+  --muted:#5D6B7A;
+  --ocean:#1D7EA8;
+  --ocean-deep:#145E7F;
+  --ocean-tint:#EAF3F8;
+  --paper:#FFFFFF;
+  --paper-2:#F5F7F9;
+  --line:#E3E8ED;
+  --shadow-sm:0 1px 2px rgba(10,28,46,.06), 0 6px 18px rgba(10,28,46,.05);
+  --shadow-md:0 2px 6px rgba(10,28,46,.07), 0 18px 40px rgba(10,28,46,.08);
+  --r-lg:14px;
+  --r-md:10px;
+  --maxw:1180px;
+  --nav-h:74px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 12px);-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Inter",system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:17px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,h4{font-family:"Archivo","Inter",system-ui,sans-serif;margin:0;line-height:1.12;letter-spacing:-.02em;font-weight:700;color:var(--navy)}
+h1{font-size:clamp(2.2rem,5.4vw,3.85rem)}
+h2{font-size:clamp(1.75rem,3.6vw,2.6rem)}
+h3{font-size:1.16rem;letter-spacing:-.012em;font-weight:600}
+p{margin:0 0 1rem}
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.section{padding:96px 0}
+.section--tight{padding:72px 0}
+.section--paper{background:var(--paper-2)}
+.lede{color:var(--muted);font-size:1.06rem;max-width:62ch}
+.section-head{max-width:66ch;margin-bottom:48px}
+.section-head p{margin-top:16px}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+  font-family:"Inter",sans-serif;font-weight:600;font-size:.98rem;
+  padding:.85rem 1.5rem;border-radius:999px;border:1px solid transparent;
+  text-decoration:none;cursor:pointer;
+  transition:background-color .22s ease, color .22s ease, border-color .22s ease, transform .22s ease, box-shadow .22s ease;
+}
+.btn--primary{background:var(--ocean);color:#fff;box-shadow:0 8px 20px rgba(29,126,168,.24)}
+.btn--primary:hover{background:var(--ocean-deep);transform:translateY(-1px)}
+.btn--navy{background:var(--navy);color:#fff}
+.btn--navy:hover{background:var(--navy-soft);transform:translateY(-1px)}
+.btn--ghost{border-color:rgba(255,255,255,.34);color:#fff}
+.btn--ghost:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.6)}
+.btn--outline{border-color:var(--line);color:var(--navy);background:#fff}
+.btn--outline:hover{border-color:var(--ocean);color:var(--ocean)}
+.btn--wide{width:100%}
+:where(a,button,input,select,textarea,.chip,.filter):focus-visible{
+  outline:3px solid var(--ocean);outline-offset:3px;border-radius:6px;
+}
+
+/* ---------- nav ---------- */
+.nav{
+  position:fixed;inset:0 0 auto 0;z-index:80;height:var(--nav-h);
+  background:rgba(255,255,255,.86);backdrop-filter:blur(12px);
+  border-bottom:1px solid transparent;transition:border-color .25s ease, box-shadow .25s ease;
+}
+.nav.is-stuck{border-bottom-color:var(--line);box-shadow:0 6px 24px rgba(10,28,46,.06)}
+.nav__inner{height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:"Archivo",sans-serif;font-weight:700;font-size:1.18rem;letter-spacing:-.02em;color:var(--navy)}
+.brand__mark{width:32px;height:32px;flex:0 0 32px}
+.brand span i{font-style:normal;color:var(--ocean)}
+.nav__links{display:flex;align-items:center;gap:30px;list-style:none;margin:0;padding:0}
+.nav__links a{
+  text-decoration:none;font-size:.95rem;font-weight:500;color:var(--charcoal);
+  position:relative;padding:6px 0;transition:color .2s ease;
+}
+.nav__links a::after{
+  content:"";position:absolute;left:0;right:100%;bottom:0;height:2px;background:var(--ocean);
+  transition:right .28s ease;
+}
+.nav__links a:hover{color:var(--navy)}
+.nav__links a:hover::after,.nav__links a.is-active::after{right:0}
+.nav__cta{display:flex;align-items:center;gap:12px}
+.nav__toggle{
+  display:none;width:44px;height:44px;border:1px solid var(--line);background:#fff;border-radius:10px;
+  align-items:center;justify-content:center;cursor:pointer;
+}
+.nav__toggle span{display:block;width:18px;height:1.8px;background:var(--navy);border-radius:2px;position:relative;transition:transform .25s ease, background-color .2s ease}
+.nav__toggle span::before,.nav__toggle span::after{content:"";position:absolute;left:0;width:18px;height:1.8px;background:var(--navy);border-radius:2px;transition:transform .25s ease, opacity .2s ease}
+.nav__toggle span::before{top:-6px}
+.nav__toggle span::after{top:6px}
+.nav.is-open .nav__toggle span{background:transparent}
+.nav.is-open .nav__toggle span::before{transform:translateY(6px) rotate(45deg)}
+.nav.is-open .nav__toggle span::after{transform:translateY(-6px) rotate(-45deg)}
+.mobile-menu{
+  position:fixed;top:var(--nav-h);left:0;right:0;z-index:79;
+  background:#fff;border-bottom:1px solid var(--line);
+  transform:translateY(-8px);opacity:0;visibility:hidden;pointer-events:none;
+  transition:opacity .22s ease, transform .22s ease, visibility .22s;
+  box-shadow:var(--shadow-md);
+}
+.mobile-menu.is-open{opacity:1;transform:none;visibility:visible;pointer-events:auto}
+.mobile-menu ul{list-style:none;margin:0;padding:12px 24px 22px}
+.mobile-menu li + li{border-top:1px solid var(--line)}
+.mobile-menu a{display:block;padding:15px 0;text-decoration:none;font-weight:500;color:var(--charcoal)}
+.mobile-menu .btn{margin-top:16px}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;background:var(--navy);color:#fff;overflow:hidden;
+  padding:calc(var(--nav-h) + 84px) 0 92px;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(1100px 620px at 78% 18%, rgba(29,126,168,.30), transparent 62%);
+}
+.hero__grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+.hero h1{color:#fff;max-width:14ch}
+.hero__text{max-width:52ch;color:rgba(255,255,255,.76);font-size:1.08rem;margin:26px 0 34px}
+.hero__actions{display:flex;flex-wrap:wrap;gap:14px}
+.hero__trust{
+  display:flex;flex-wrap:wrap;gap:10px 26px;align-items:center;
+  margin-top:44px;padding-top:26px;border-top:1px solid rgba(255,255,255,.14);
+  font-size:.92rem;color:rgba(255,255,255,.66);
+}
+.hero__trust li{list-style:none;display:flex;align-items:center;gap:9px}
+.hero__trust ul{display:contents}
+.dot{width:5px;height:5px;border-radius:50%;background:var(--ocean);flex:0 0 5px}
+.hero__art{border-radius:18px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.35);background:#fff}
+.hero__caption{
+  margin-top:14px;font-size:.85rem;color:rgba(255,255,255,.55);
+  display:flex;justify-content:space-between;gap:16px;
+}
+
+/* ---------- about ---------- */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.about__art{border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-md);background:var(--paper-2)}
+.about h2{max-width:12ch}
+.pill-list{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:14px}
+.pill-list li{display:flex;gap:13px;align-items:flex-start;font-size:.99rem}
+.tick{flex:0 0 22px;width:22px;height:22px;margin-top:2px;border-radius:50%;background:var(--ocean-tint);display:grid;place-items:center}
+.tick svg{width:11px;height:11px;stroke:var(--ocean-deep);stroke-width:2.4;fill:none}
+
+/* ---------- services ---------- */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;
+  display:flex;flex-direction:column;
+  transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:#D6DEE6}
+.card__art{background:var(--paper-2);border-bottom:1px solid var(--line)}
+.card__body{padding:26px 26px 28px;display:flex;flex-direction:column;flex:1}
+.card__body p{color:var(--muted);font-size:.97rem;margin:11px 0 20px}
+.card__link{
+  margin-top:auto;text-decoration:none;font-weight:600;font-size:.93rem;color:var(--ocean-deep);
+  display:inline-flex;align-items:center;gap:8px;align-self:flex-start;
+}
+.card__link svg{width:14px;height:14px;stroke:currentColor;stroke-width:2;fill:none;transition:transform .25s ease}
+.card:hover .card__link svg{transform:translateX(4px)}
+
+/* ---------- why ---------- */
+.why{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--line);border-radius:var(--r-lg);background:#fff;overflow:hidden}
+.why__item{padding:34px 28px;border-right:1px solid var(--line)}
+.why__item:last-child{border-right:0}
+.why__icon{width:34px;height:34px;stroke:var(--ocean);stroke-width:1.5;fill:none;margin-bottom:20px}
+.why__item h3{font-size:1.03rem}
+.why__item p{font-size:.92rem;color:var(--muted);margin:9px 0 0}
+
+/* ---------- portfolio ---------- */
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px}
+.filter{
+  border:1px solid var(--line);background:#fff;color:var(--charcoal);
+  font:inherit;font-size:.92rem;font-weight:500;padding:.5rem 1.05rem;border-radius:999px;cursor:pointer;
+  transition:all .2s ease;
+}
+.filter:hover{border-color:var(--ocean);color:var(--ocean-deep)}
+.filter.is-active{background:var(--navy);border-color:var(--navy);color:#fff}
+.masonry{columns:3;column-gap:22px}
+.tile{
+  break-inside:avoid;margin:0 0 22px;position:relative;overflow:hidden;border-radius:var(--r-md);
+  border:1px solid var(--line);background:#fff;
+  transition:opacity .3s ease, transform .3s ease, box-shadow .3s ease;
+}
+.tile:hover{box-shadow:var(--shadow-md)}
+.tile svg{transition:transform .5s cubic-bezier(.2,.7,.3,1)}
+.tile:hover svg{transform:scale(1.045)}
+.tile__meta{
+  position:absolute;inset:auto 0 0 0;padding:44px 18px 16px;color:#fff;
+  background:linear-gradient(to top, rgba(10,28,46,.9), rgba(10,28,46,0));
+  opacity:0;transform:translateY(8px);transition:opacity .3s ease, transform .3s ease;
+}
+.tile:hover .tile__meta,.tile:focus-within .tile__meta{opacity:1;transform:none}
+.tile__meta strong{display:block;font-family:"Archivo",sans-serif;font-size:1rem;color:#fff}
+.tile__meta span{font-size:.84rem;color:rgba(255,255,255,.7)}
+.tile.is-hidden{display:none}
+
+/* ---------- process ---------- */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;counter-reset:step}
+.step{position:relative;padding-top:30px;border-top:2px solid var(--line)}
+.step::before{
+  content:"";position:absolute;top:-2px;left:0;width:34px;height:2px;background:var(--ocean);
+}
+.step__num{font-family:"Archivo",sans-serif;font-size:.95rem;font-weight:600;color:var(--ocean);letter-spacing:.04em}
+.step h3{margin:12px 0 10px}
+.step p{color:var(--muted);font-size:.95rem;margin:0}
+
+/* ---------- cta band ---------- */
+.cta{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.cta::after{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(760px 420px at 12% 110%, rgba(29,126,168,.32), transparent 60%);
+}
+.cta__inner{position:relative;text-align:center;max-width:44ch;margin:0 auto}
+.cta h2{color:#fff}
+.cta p{color:rgba(255,255,255,.72);margin:18px 0 32px}
+
+/* ---------- contact ---------- */
+.contact{display:grid;grid-template-columns:1.12fr .88fr;gap:56px;align-items:start}
+.form-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:34px;box-shadow:var(--shadow-sm)}
+.field{margin-bottom:18px}
+.field label{display:block;font-size:.88rem;font-weight:600;color:var(--charcoal);margin-bottom:7px}
+.field input,.field select,.field textarea{
+  width:100%;font:inherit;font-size:.97rem;color:var(--ink);
+  padding:.8rem .95rem;border:1px solid var(--line);border-radius:var(--r-md);background:#fff;
+  transition:border-color .2s ease, box-shadow .2s ease;
+}
+.field textarea{min-height:128px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{
+  outline:none;border-color:var(--ocean);box-shadow:0 0 0 4px rgba(29,126,168,.13);
+}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.file-drop{
+  border:1.5px dashed #C9D4DE;border-radius:var(--r-md);padding:20px;text-align:center;
+  background:var(--paper-2);cursor:pointer;display:block;transition:border-color .2s ease, background-color .2s ease;
+}
+.file-drop:hover{border-color:var(--ocean);background:var(--ocean-tint)}
+.file-drop input{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+.file-drop strong{display:block;font-size:.93rem;color:var(--navy);font-weight:600}
+.file-drop span{font-size:.84rem;color:var(--muted)}
+.form-note{font-size:.85rem;color:var(--muted);margin:16px 0 0;text-align:center}
+.info-list{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.info-item{
+  display:flex;gap:15px;align-items:flex-start;background:#fff;border:1px solid var(--line);
+  border-radius:var(--r-md);padding:18px 20px;text-decoration:none;
+  transition:border-color .2s ease, transform .2s ease;
+}
+a.info-item:hover{border-color:var(--ocean);transform:translateX(3px)}
+.info-item svg{width:20px;height:20px;flex:0 0 20px;margin-top:3px;stroke:var(--ocean);stroke-width:1.6;fill:none}
+.info-item h4{font-family:"Inter",sans-serif;font-size:.83rem;font-weight:600;color:var(--muted);margin:0 0 3px;letter-spacing:.01em}
+.info-item p{margin:0;font-size:1rem;color:var(--navy);font-weight:500}
+.map{
+  margin-top:22px;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;background:#fff;
+}
+.map__foot{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 20px;border-top:1px solid var(--line);flex-wrap:wrap}
+.map__foot p{margin:0;font-size:.92rem;color:var(--muted)}
+.map__foot a{font-size:.92rem;font-weight:600;color:var(--ocean-deep);text-decoration:none}
+.map__foot a:hover{text-decoration:underline}
+
+/* ---------- footer ---------- */
+.footer{background:var(--navy);color:rgba(255,255,255,.66);padding:72px 0 30px;font-size:.95rem}
+.footer__grid{display:grid;grid-template-columns:1.4fr .8fr .8fr 1fr;gap:44px}
+.footer h4{font-family:"Archivo",sans-serif;color:#fff;font-size:.98rem;font-weight:600;margin:0 0 18px}
+.footer a{color:rgba(255,255,255,.66);text-decoration:none;transition:color .2s ease}
+.footer a:hover{color:#fff}
+.footer ul{list-style:none;margin:0;padding:0;display:grid;gap:11px}
+.footer .brand{color:#fff;font-size:1.22rem}
+.footer__about{max-width:34ch;margin:18px 0 0;color:rgba(255,255,255,.6)}
+.socials{display:flex;gap:11px;margin-top:20px}
+.socials a{
+  width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.18);
+  display:grid;place-items:center;transition:background-color .2s ease, border-color .2s ease;
+}
+.socials a:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.4)}
+.socials svg{width:17px;height:17px;fill:#fff}
+.footer__bottom{
+  margin-top:54px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12);
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.88rem;color:rgba(255,255,255,.5);
+}
+
+/* ---------- whatsapp float ---------- */
+.wa{
+  position:fixed;right:20px;bottom:20px;z-index:70;
+  display:flex;align-items:center;gap:10px;
+  background:#128C7E;color:#fff;text-decoration:none;font-weight:600;font-size:.93rem;
+  padding:.8rem 1.2rem;border-radius:999px;box-shadow:0 12px 30px rgba(18,140,126,.4);
+  transition:transform .22s ease, background-color .22s ease;
+}
+.wa:hover{transform:translateY(-2px);background:#0F7A6C}
+.wa svg{width:20px;height:20px;fill:#fff}
+
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.3,1)}
+.reveal.is-in{opacity:1;transform:none}
+
+/* ---------- responsive ---------- */
+@media (max-width:1040px){
+  .hero__grid{grid-template-columns:1fr;gap:46px}
+  .hero__art{order:-1}
+  .about{grid-template-columns:1fr;gap:42px}
+  .grid-3{grid-template-columns:repeat(2,1fr)}
+  .why{grid-template-columns:repeat(2,1fr)}
+  .why__item{border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .why__item:nth-child(2n){border-right:0}
+  .why__item:last-child{grid-column:1/-1;border-bottom:0}
+  .steps{grid-template-columns:repeat(2,1fr);gap:34px 26px}
+  .masonry{columns:2}
+  .contact{grid-template-columns:1fr;gap:38px}
+}
+@media (max-width:860px){
+  .nav__links,.nav__cta .btn{display:none}
+  .nav__toggle{display:flex}
+  .footer__grid{grid-template-columns:1fr 1fr;gap:38px}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .section{padding:68px 0}
+  .section--tight{padding:56px 0}
+  .hero{padding:calc(var(--nav-h) + 52px) 0 68px}
+  .wrap{padding:0 20px}
+  .grid-3{grid-template-columns:1fr}
+  .why{grid-template-columns:1fr}
+  .why__item{border-right:0}
+  .steps{grid-template-columns:1fr}
+  .masonry{columns:1}
+  .field-row{grid-template-columns:1fr}
+  .form-card{padding:24px 20px}
+  .footer__grid{grid-template-columns:1fr}
+  .hero__actions .btn{flex:1 1 auto}
+  .wa span{display:none}
+  .wa{padding:.9rem;border-radius:50%}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms !important;transition-duration:.001ms !important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= artwork symbols ================= -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="art-press" viewBox="0 0 520 380">
+      <rect width="520" height="380" fill="#F5F7F9"/>
+      <rect x="44" y="34" width="432" height="312" rx="4" fill="#fff" stroke="#E3E8ED"/>
+      <g fill="#0A1C2E">
+        <rect x="76" y="70" width="210" height="18" rx="3"/>
+        <rect x="76" y="98" width="150" height="18" rx="3"/>
+      </g>
+      <rect x="76" y="136" width="256" height="7" rx="3.5" fill="#C9D4DE"/>
+      <rect x="76" y="152" width="222" height="7" rx="3.5" fill="#C9D4DE"/>
+      <rect x="76" y="168" width="180" height="7" rx="3.5" fill="#DDE3E9"/>
+      <rect x="76" y="206" width="160" height="104" rx="4" fill="#1D7EA8"/>
+      <rect x="248" y="206" width="84" height="104" rx="4" fill="#0A1C2E"/>
+      <rect x="344" y="206" width="84" height="104" rx="4" fill="#EAF3F8" stroke="#CBDCE6"/>
+      <g stroke="#1D7EA8" stroke-width="1.4" fill="none">
+        <circle cx="398" cy="96" r="22"/><path d="M398 66v60M368 96h60"/>
+      </g>
+      <g stroke="#9AA9B7" stroke-width="1.2">
+        <path d="M44 18v10M44 352v10M476 18v10M476 352v10M18 34h10M492 34h10M18 346h10M492 346h10"/>
+      </g>
+      <g fill="#0A1C2E" opacity=".9">
+        <rect x="76" y="330" width="22" height="9"/><rect x="100" y="330" width="22" height="9" fill="#1D7EA8"/>
+        <rect x="124" y="330" width="22" height="9" fill="#5D6B7A"/><rect x="148" y="330" width="22" height="9" fill="#C9D4DE"/>
+      </g>
+    </symbol>
+
+    <symbol id="art-banner" viewBox="0 0 400 300">
+      <rect width="400" height="300" fill="var(--a-bg,#F5F7F9)"/>
+      <rect x="70" y="26" width="180" height="212" rx="4" fill="var(--a-1,#0A1C2E)"/>
+      <rect x="92" y="56" width="104" height="11" rx="2" fill="#fff" opacity=".92"/>
+      <rect x="92" y="76" width="70" height="11" rx="2" fill="var(--a-2,#1D7EA8)"/>
+      <rect x="92" y="108" width="136" height="70" rx="3" fill="#fff" opacity=".13"/>
+      <rect x="92" y="196" width="88" height="8" rx="4" fill="#fff" opacity=".45"/>
+      <rect x="58" y="238" width="204" height="12" rx="6" fill="#C9D4DE"/>
+      <path d="M160 250v28" stroke="#9AA9B7" stroke-width="5"/>
+      <rect x="120" y="276" width="80" height="9" rx="4.5" fill="#9AA9B7"/>
+      <rect x="284" y="86" width="60" height="152" rx="4" fill="var(--a-2,#1D7EA8)" opacity=".28"/>
+      <rect x="284" y="86" width="60" height="46" rx="4" fill="var(--a-2,#1D7EA8)"/>
+    </symbol>
+
+    <symbol id="art-idcard" viewBox="0 0 400 300">
+      <rect width="400" height="300" fill="var(--a-bg,#F5F7F9)"/>
+      <path d="M200 10v54" stroke="#C9D4DE" stroke-width="10"/>
+      <rect x="112" y="72" width="176" height="196" rx="12" fill="#fff" stroke="#E3E8ED"/>
+      <rect x="112" y="72" width="176" height="52" rx="12" fill="var(--a-1,#0A1C2E)"/>
+      <rect x="112" y="108" width="176" height="16" fill="var(--a-1,#0A1C2E)"/>
+      <rect x="134" y="90" width="66" height="9" rx="2" fill="#fff" opacity=".9"/>
+      <circle cx="194" cy="176" r="34" fill="#EAF3F8" stroke="#CBDCE6"/>
+      <circle cx="194" cy="166" r="13" fill="#9AA9B7"/>
+      <path d="M172 204a22 22 0 0 1 44 0z" fill="#9AA9B7"/>
+      <rect x="146" y="224" width="96" height="9" rx="4.5" fill="#0A1C2E"/>
+      <rect x="160" y="240" width="68" height="7" rx="3.5" fill="#C9D4DE"/>
+      <rect x="112" y="256" width="176" height="12" fill="var(--a-2,#1D7EA8)"/>
+      <circle cx="200" cy="66" r="7" fill="#9AA9B7"/>
+    </symbol>
+
+    <symbol id="art-uv" viewBox="0 0 400 300">
+      <rect width="400" height="300" fill="var(--a-bg,#F5F7F9)"/>
+      <path d="M150 74h44v26c0 10 34 22 34 56v104a14 14 0 0 1-14 14h-84a14 14 0 0 1-14-14V156c0-34 34-46 34-56z" fill="var(--a-1,#0A1C2E)"/>
+      <rect x="146" y="180" width="52" height="52" rx="4" fill="var(--a-2,#1D7EA8)"/>
+      <path d="M156 74h10v-14h-10z" fill="#9AA9B7"/>
+      <path d="M170 152c0 60 0 66 0 116" stroke="#fff" stroke-width="4" opacity=".16"/>
+      <rect x="248" y="122" width="80" height="102" rx="10" fill="#fff" stroke="#E3E8ED"/>
+      <rect x="264" y="146" width="48" height="26" rx="3" fill="var(--a-2,#1D7EA8)" opacity=".85"/>
+      <rect x="264" y="182" width="32" height="7" rx="3.5" fill="#C9D4DE"/>
+      <path d="M296 108v-20M276 112l-10-16M318 112l10-16" stroke="var(--a-2,#1D7EA8)" stroke-width="3" stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="art-branding" viewBox="0 0 400 300">
+      <rect width="400" height="300" fill="var(--a-bg,#F5F7F9)"/>
+      <rect x="0" y="212" width="400" height="88" fill="#E9EDF1"/>
+      <rect x="46" y="48" width="308" height="164" rx="6" fill="#fff" stroke="#E3E8ED"/>
+      <rect x="46" y="48" width="308" height="42" rx="6" fill="var(--a-1,#0A1C2E)"/>
+      <rect x="46" y="76" width="308" height="14" fill="var(--a-1,#0A1C2E)"/>
+      <circle cx="78" cy="68" r="11" fill="var(--a-2,#1D7EA8)"/>
+      <rect x="98" y="63" width="76" height="10" rx="2" fill="#fff" opacity=".9"/>
+      <rect x="78" y="116" width="122" height="14" rx="3" fill="#0A1C2E"/>
+      <rect x="78" y="140" width="164" height="7" rx="3.5" fill="#C9D4DE"/>
+      <rect x="78" y="156" width="132" height="7" rx="3.5" fill="#DDE3E9"/>
+      <rect x="78" y="178" width="76" height="16" rx="8" fill="var(--a-2,#1D7EA8)"/>
+      <rect x="246" y="116" width="86" height="78" rx="4" fill="#EAF3F8" stroke="#CBDCE6"/>
+      <rect x="120" y="234" width="160" height="10" rx="5" fill="#C9D4DE"/>
+    </symbol>
+
+    <symbol id="art-stickers" viewBox="0 0 400 300">
+      <rect width="400" height="300" fill="var(--a-bg,#F5F7F9)"/>
+      <circle cx="146" cy="128" r="58" fill="var(--a-1,#0A1C2E)"/>
+      <circle cx="146" cy="128" r="58" fill="none" stroke="#fff" stroke-width="5"/>
+      <circle cx="146" cy="128" r="26" fill="var(--a-2,#1D7EA8)"/>
+      <rect x="206" y="88" width="108" height="80" rx="14" fill="#fff" stroke="#E3E8ED"/>
+      <rect x="226" y="110" width="68" height="10" rx="3" fill="#0A1C2E"/>
+      <rect x="226" y="130" width="46" height="8" rx="4" fill="#C9D4DE"/>
+      <path d="M118 196h124a16 16 0 0 1 16 16v34a16 16 0 0 1-16 16H118a16 16 0 0 1-16-16v-34a16 16 0 0 1 16-16z" fill="var(--a-2,#1D7EA8)"/>
+      <rect x="126" y="216" width="80" height="9" rx="4.5" fill="#fff" opacity=".85"/>
+      <rect x="126" y="232" width="52" height="7" rx="3.5" fill="#fff" opacity=".5"/>
+      <circle cx="298" cy="212" r="34" fill="#EAF3F8" stroke="#CBDCE6" stroke-dasharray="6 6"/>
+    </symbol>
+
+    <symbol id="art-flyers" viewBox="0 0 400 300">
+      <rect width="400" height="300" fill="var(--a-bg,#F5F7F9)"/>
+      <rect x="66" y="52" width="136" height="192" rx="4" fill="#fff" stroke="#E3E8ED" transform="rotate(-6 134 148)"/>
+      <rect x="118" y="44" width="150" height="212" rx="4" fill="#fff" stroke="#E3E8ED"/>
+      <rect x="118" y="44" width="150" height="76" fill="var(--a-1,#0A1C2E)"/>
+      <rect x="138" y="70" width="86" height="12" rx="3" fill="#fff" opacity=".92"/>
+      <rect x="138" y="90" width="56" height="10" rx="3" fill="var(--a-2,#1D7EA8)"/>
+      <rect x="138" y="140" width="110" height="7" rx="3.5" fill="#C9D4DE"/>
+      <rect x="138" y="156" width="94" height="7" rx="3.5" fill="#C9D4DE"/>
+      <rect x="138" y="172" width="104" height="7" rx="3.5" fill="#DDE3E9"/>
+      <rect x="138" y="202" width="72" height="20" rx="10" fill="var(--a-2,#1D7EA8)"/>
+      <rect x="284" y="96" width="52" height="108" rx="4" fill="#EAF3F8" stroke="#CBDCE6"/>
+    </symbol>
+
+    <symbol id="art-signage" viewBox="0 0 400 300">
+      <rect width="400" height="300" fill="var(--a-bg,#F5F7F9)"/>
+      <rect x="0" y="228" width="400" height="72" fill="#E9EDF1"/>
+      <rect x="62" y="64" width="276" height="112" rx="8" fill="var(--a-1,#0A1C2E)"/>
+      <circle cx="108" cy="120" r="20" fill="var(--a-2,#1D7EA8)"/>
+      <rect x="142" y="104" width="130" height="16" rx="3" fill="#fff" opacity=".92"/>
+      <rect x="142" y="128" width="88" height="10" rx="3" fill="#fff" opacity=".45"/>
+      <path d="M118 176v52M282 176v52" stroke="#9AA9B7" stroke-width="9"/>
+      <rect x="96" y="226" width="44" height="10" rx="4" fill="#9AA9B7"/>
+      <rect x="260" y="226" width="44" height="10" rx="4" fill="#9AA9B7"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ================= nav ================= -->
+<header class="nav" id="nav">
+  <div class="wrap nav__inner">
+    <a class="brand" href="#top" aria-label="OceanGraphics home">
+      <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+        <rect width="32" height="32" rx="8" fill="#0A1C2E"/>
+        <path d="M7 20c2.6 0 2.6-3 5.2-3s2.6 3 5.2 3 2.6-3 5.2-3c1.3 0 1.95.75 2.6 1.5" stroke="#1D7EA8" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+        <rect x="9" y="8" width="14" height="5" rx="1.4" fill="#fff"/>
+      </svg>
+      <span>Ocean<i>Graphics</i></span>
+    </a>
+
+    <nav aria-label="Main">
+      <ul class="nav__links">
+        <li><a href="#top">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work">Our Work</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav__cta">
+      <a class="btn btn--primary" href="#contact">Get a Quote</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#top">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#work">Our Work</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="wrap" style="padding-bottom:22px">
+    <a class="btn btn--primary btn--wide" href="#contact">Get a Quote</a>
+  </div>
+</div>
+
+<main id="top">
+
+  <!-- ================= hero ================= -->
+  <section class="hero">
+    <div class="wrap hero__grid">
+      <div>
+        <h1>We Print. We Brand. We Make Your Business Stand Out.</h1>
+        <p class="hero__text">Professional printing and branding solutions for businesses, organizations and individuals. From large format printing to premium UV and I.D card printing, OceanGraphics brings your ideas to life.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#contact">Get a Quote</a>
+          <a class="btn btn--ghost" href="#services">View Our Services</a>
+        </div>
+        <ul class="hero__trust">
+          <li><span class="dot"></span>Quality Printing</li>
+          <li><span class="dot"></span>Professional Finishing</li>
+          <li><span class="dot"></span>Reliable Service</li>
+        </ul>
+      </div>
+      <div>
+        <div class="hero__art">
+          <svg viewBox="0 0 520 380" role="img" aria-label="A press sheet with colour bars and registration marks"><use href="#art-press"/></svg>
+        </div>
+        <div class="hero__caption">
+          <span>Proof sheet · colour bars checked before every run</span>
+          <span>Lagos, Nigeria</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= about ================= -->
+  <section class="section" id="about">
+    <div class="wrap about">
+      <div class="reveal">
+        <h2>Printing That Makes an Impression.</h2>
+        <p class="lede" style="margin-top:20px">OceanGraphics helps businesses, organizations and individuals turn ideas into physical, high-quality printed materials — the banner outside your office, the card around your team's neck, the label on your product.</p>
+        <p class="lede">We handle the whole job in-house, from checking your artwork to the final trim, so what you collect matches what you approved.</p>
+        <ul class="pill-list">
+          <li><span class="tick"><svg viewBox="0 0 12 12"><path d="M1 6.2 4.4 9.6 11 2.6"/></svg></span><span><strong>Quality-focused production</strong> — colour and material checked before the full run.</span></li>
+          <li><span class="tick"><svg viewBox="0 0 12 12"><path d="M1 6.2 4.4 9.6 11 2.6"/></svg></span><span><strong>Professional finishing</strong> — clean cuts, proper lamination, neat mounting.</span></li>
+          <li><span class="tick"><svg viewBox="0 0 12 12"><path d="M1 6.2 4.4 9.6 11 2.6"/></svg></span><span><strong>Attention to detail</strong> — we flag artwork problems before they get printed.</span></li>
+          <li><span class="tick"><svg viewBox="0 0 12 12"><path d="M1 6.2 4.4 9.6 11 2.6"/></svg></span><span><strong>Fast turnaround</strong> — most jobs are ready within 24 to 72 hours.</span></li>
+          <li><span class="tick"><svg viewBox="0 0 12 12"><path d="M1 6.2 4.4 9.6 11 2.6"/></svg></span><span><strong>Custom solutions</strong> — odd sizes, unusual surfaces and one-off requests welcome.</span></li>
+        </ul>
+      </div>
+      <div class="about__art reveal">
+        <svg viewBox="0 0 400 300" role="img" aria-label="A branded office reception wall"><use href="#art-branding"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= services ================= -->
+  <section class="section section--paper" id="services">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>What we print</h2>
+        <p class="lede">Six core services, all produced in-house. If what you need isn't listed, ask — custom jobs are a large part of what we do.</p>
+      </div>
+
+      <div class="grid-3">
+        <article class="card reveal">
+          <div class="card__art"><svg viewBox="0 0 400 300" role="img" aria-label="Roll-up banner and large format print"><use href="#art-banner"/></svg></div>
+          <div class="card__body">
+            <h3>Large Format Printing</h3>
+            <p>Banners, posters, backdrops, roll-up banners and other large-scale prints.</p>
+            <a class="card__link" href="#contact">Learn more <svg viewBox="0 0 16 16"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__art"><svg viewBox="0 0 400 300" role="img" aria-label="Identification card on a lanyard"><use href="#art-idcard"/></svg></div>
+          <div class="card__body">
+            <h3>I.D Card Printing</h3>
+            <p>Professional identification cards for companies, schools, organizations and events.</p>
+            <a class="card__link" href="#contact">Learn more <svg viewBox="0 0 16 16"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__art"><svg viewBox="0 0 400 300" role="img" aria-label="UV printed bottle and branded box"><use href="#art-uv"/></svg></div>
+          <div class="card__body">
+            <h3>UV Printing</h3>
+            <p>Premium direct-to-surface printing with sharp details and high-quality finishes.</p>
+            <a class="card__link" href="#contact">Learn more <svg viewBox="0 0 16 16"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__art"><svg viewBox="0 0 400 300" role="img" aria-label="Branded office wall and materials"><use href="#art-branding"/></svg></div>
+          <div class="card__body">
+            <h3>Branding</h3>
+            <p>Business branding solutions including branded materials, signage and promotional items.</p>
+            <a class="card__link" href="#contact">Learn more <svg viewBox="0 0 16 16"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__art"><svg viewBox="0 0 400 300" role="img" aria-label="Die-cut stickers and product labels"><use href="#art-stickers"/></svg></div>
+          <div class="card__body">
+            <h3>Stickers &amp; Labels</h3>
+            <p>Custom stickers and product labels for businesses and personal projects.</p>
+            <a class="card__link" href="#contact">Learn more <svg viewBox="0 0 16 16"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__art"><svg viewBox="0 0 400 300" role="img" aria-label="Stack of printed flyers and a poster"><use href="#art-flyers"/></svg></div>
+          <div class="card__body">
+            <h3>Flyers &amp; Posters</h3>
+            <p>Professional promotional materials designed to communicate your message clearly.</p>
+            <a class="card__link" href="#contact">Learn more <svg viewBox="0 0 16 16"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= why ================= -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Why businesses choose OceanGraphics</h2>
+        <p class="lede">Printing is only useful when it arrives right and on time. That is what we organise ourselves around.</p>
+      </div>
+      <div class="why reveal">
+        <div class="why__item">
+          <svg class="why__icon" viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6.1.8-4.5 4.2 1.2 6.1L12 16.8 6.6 19.7l1.2-6.1-4.5-4.2 6.1-.8z" stroke-linejoin="round"/></svg>
+          <h3>Quality First</h3>
+          <p>Materials and colour are checked against your approved proof before the full run starts.</p>
+        </div>
+        <div class="why__item">
+          <svg class="why__icon" viewBox="0 0 24 24"><path d="M4 7h16v13H4z"/><path d="M4 7l3-4h10l3 4M9 12h6"/></svg>
+          <h3>Professional Finishing</h3>
+          <p>Trimming, lamination, eyeleting and mounting handled properly, not rushed.</p>
+        </div>
+        <div class="why__item">
+          <svg class="why__icon" viewBox="0 0 24 24"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg>
+          <h3>Custom Solutions</h3>
+          <p>Non-standard sizes, unusual surfaces and small one-off jobs are all welcome.</p>
+        </div>
+        <div class="why__item">
+          <svg class="why__icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2.5"/></svg>
+          <h3>Reliable Turnaround</h3>
+          <p>You get a collection date with your quote, and we tell you early if anything shifts.</p>
+        </div>
+        <div class="why__item">
+          <svg class="why__icon" viewBox="0 0 24 24"><path d="M3 20v-1.5A4.5 4.5 0 0 1 7.5 14h3A4.5 4.5 0 0 1 15 18.5V20"/><circle cx="9" cy="8" r="3.4"/><path d="M17 20v-1.5a4.5 4.5 0 0 0-2.2-3.9M16 5.2a3.4 3.4 0 0 1 0 6.3"/></svg>
+          <h3>Business &amp; Personal</h3>
+          <p>From a corporate rollout across branches to a single birthday banner.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= work ================= -->
+  <section class="section section--paper" id="work">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Our work</h2>
+        <p class="lede">A sample of recent jobs — banners, signage, cards, UV pieces and full office branding.</p>
+      </div>
+
+      <div class="filters reveal" role="group" aria-label="Filter portfolio by category">
+        <button class="filter is-active" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" data-filter="large-format" aria-pressed="false">Large Format</button>
+        <button class="filter" data-filter="uv" aria-pressed="false">UV Printing</button>
+        <button class="filter" data-filter="id" aria-pressed="false">I.D Cards</button>
+        <button class="filter" data-filter="branding" aria-pressed="false">Branding</button>
+      </div>
+
+      <div class="masonry" id="masonry">
+        <figure class="tile" data-cat="large-format">
+          <svg viewBox="0 0 400 300" role="img" aria-label="Roll-up banner for a conference"><use href="#art-banner"/></svg>
+          <figcaption class="tile__meta"><strong>Conference roll-up banners</strong><span>Large Format · Victoria Island</span></figcaption>
+        </figure>
+        <figure class="tile" data-cat="branding" style="--a-1:#122B44;--a-2:#1D7EA8">
+          <svg viewBox="0 0 400 300" role="img" aria-label="Branded office reception wall"><use href="#art-branding"/></svg>
+          <figcaption class="tile__meta"><strong>Reception wall branding</strong><span>Branding · Ikeja</span></figcaption>
+        </figure>
+        <figure class="tile" data-cat="id">
+          <svg viewBox="0 0 400 300" role="img" aria-label="Staff identification cards"><use href="#art-idcard"/></svg>
+          <figcaption class="tile__meta"><strong>Staff I.D cards, 240 units</strong><span>I.D Cards · Corporate</span></figcaption>
+        </figure>
+        <figure class="tile" data-cat="uv" style="--a-1:#2B3440">
+          <svg viewBox="0 0 400 300" role="img" aria-label="UV printed bottles"><use href="#art-uv"/></svg>
+          <figcaption class="tile__meta"><strong>UV printed drinkware</strong><span>UV Printing · Promo items</span></figcaption>
+        </figure>
+        <figure class="tile" data-cat="branding">
+          <svg viewBox="0 0 400 300" role="img" aria-label="Shopfront signage"><use href="#art-signage"/></svg>
+          <figcaption class="tile__meta"><strong>Illuminated shopfront sign</strong><span>Branding · Lekki</span></figcaption>
+        </figure>
+        <figure class="tile" data-cat="branding" style="--a-2:#145E7F">
+          <svg viewBox="0 0 400 300" role="img" aria-label="Product stickers and labels"><use href="#art-stickers"/></svg>
+          <figcaption class="tile__meta"><strong>Product label run</strong><span>Branding · Skincare brand</span></figcaption>
+        </figure>
+        <figure class="tile" data-cat="large-format">
+          <svg viewBox="0 0 400 300" role="img" aria-label="Event posters and flyers"><use href="#art-flyers"/></svg>
+          <figcaption class="tile__meta"><strong>Event posters &amp; flyers</strong><span>Large Format · Yaba</span></figcaption>
+        </figure>
+        <figure class="tile" data-cat="id" style="--a-1:#145E7F;--a-2:#0A1C2E">
+          <svg viewBox="0 0 400 300" role="img" aria-label="School identification cards"><use href="#art-idcard"/></svg>
+          <figcaption class="tile__meta"><strong>School I.D cards</strong><span>I.D Cards · Education</span></figcaption>
+        </figure>
+        <figure class="tile" data-cat="uv">
+          <svg viewBox="0 0 400 300" role="img" aria-label="UV printed gift boxes"><use href="#art-stickers"/></svg>
+          <figcaption class="tile__meta"><strong>UV printed gift boxes</strong><span>UV Printing · Corporate gifts</span></figcaption>
+        </figure>
+        <figure class="tile" data-cat="large-format" style="--a-1:#0A1C2E;--a-2:#145E7F">
+          <svg viewBox="0 0 400 300" role="img" aria-label="Outdoor backdrop banner"><use href="#art-signage"/></svg>
+          <figcaption class="tile__meta"><strong>Outdoor backdrop</strong><span>Large Format · Product launch</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= process ================= -->
+  <section class="section" id="process">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>How a job runs</h2>
+        <p class="lede">Four steps from your first message to collection. You will know the price and the date before anything is printed.</p>
+      </div>
+      <div class="steps reveal">
+        <div class="step">
+          <div class="step__num">01</div>
+          <h3>Tell us what you need</h3>
+          <p>Send your design, idea or requirements.</p>
+        </div>
+        <div class="step">
+          <div class="step__num">02</div>
+          <h3>Get a quote</h3>
+          <p>We review the project and provide pricing.</p>
+        </div>
+        <div class="step">
+          <div class="step__num">03</div>
+          <h3>Production</h3>
+          <p>Our team handles the printing and finishing.</p>
+        </div>
+        <div class="step">
+          <div class="step__num">04</div>
+          <h3>Delivery / pickup</h3>
+          <p>Receive your completed project ready for use.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= cta ================= -->
+  <section class="section section--tight cta">
+    <div class="wrap cta__inner">
+      <h2>Have a Project in Mind?</h2>
+      <p>Let's turn your idea into something people can see, touch and remember.</p>
+      <a class="btn btn--primary" href="#contact">Request a Quote</a>
+    </div>
+  </section>
+
+  <!-- ================= contact ================= -->
+  <section class="section" id="contact">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Request a quote</h2>
+        <p class="lede">Tell us about the job and we'll come back with pricing and a collection date. Most quotes go out the same working day.</p>
+      </div>
+
+      <div class="contact">
+        <form class="form-card reveal" id="quoteForm" novalidate>
+          <div class="field-row">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="Your full name" required>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="phone">Phone number</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="080 0000 0000" required>
+            </div>
+            <div class="field">
+              <label for="service">Service needed</label>
+              <select id="service" name="service" required>
+                <option value="" selected disabled>Select a service</option>
+                <option>Large Format Printing</option>
+                <option>I.D Card Printing</option>
+                <option>UV Printing</option>
+                <option>Branding</option>
+                <option>Stickers &amp; Labels</option>
+                <option>Flyers &amp; Posters</option>
+                <option>Something else</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="details">Project details</label>
+            <textarea id="details" name="details" placeholder="Sizes, quantity, material, deadline — whatever you already know." required></textarea>
+          </div>
+
+          <div class="field">
+            <label for="design">Upload design or file</label>
+            <label class="file-drop" for="design">
+              <input id="design" name="design" type="file" accept=".pdf,.ai,.psd,.png,.jpg,.jpeg,.svg,.cdr,.zip">
+              <strong id="fileLabel">Choose a file</strong>
+              <span>PDF, AI, PSD, CDR, PNG or JPG — up to 25&nbsp;MB</span>
+            </label>
+          </div>
+
+          <button class="btn btn--navy btn--wide" type="submit">Submit request</button>
+          <p class="form-note" id="formNote">We reply within one working day. Prefer to talk? Message us on WhatsApp.</p>
+        </form>
+
+        <div class="reveal">
+          <ul class="info-list">
+            <li><a class="info-item" href="tel:+2348000000000">
+              <svg viewBox="0 0 24 24"><path d="M5 3h3l2 5-2.5 1.5a12 12 0 0 0 5 5L14 12l5 2v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3z"/></svg>
+              <div><h4>Phone</h4><p>+234 800 000 0000</p></div>
+            </a></li>
+            <li><a class="info-item" href="https://wa.me/2348000000000" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24"><path d="M3.5 20.5 5 16.3A8.4 8.4 0 1 1 8 19.3z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5"/></svg>
+              <div><h4>WhatsApp</h4><p>Chat with us now</p></div>
+            </a></li>
+            <li><a class="info-item" href="mailto:hello@oceangraphics.ng">
+              <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg>
+              <div><h4>Email</h4><p>hello@oceangraphics.ng</p></div>
+            </a></li>
+            <li><div class="info-item">
+              <svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+              <div><h4>Business location</h4><p>Ikeja, Lagos, Nigeria</p></div>
+            </div></li>
+            <li><div class="info-item">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2.5"/></svg>
+              <div><h4>Opening hours</h4><p>Mon–Fri, 8am–6pm · Sat, 9am–4pm</p></div>
+            </div></li>
+          </ul>
+
+          <div class="map">
+            <svg viewBox="0 0 400 210" role="img" aria-label="Map showing the OceanGraphics location in Ikeja, Lagos">
+              <rect width="400" height="210" fill="#EEF2F5"/>
+              <g stroke="#DCE3E9" stroke-width="10">
+                <path d="M-10 60h420M-10 150h420M90 -10v230M250 -10v230"/>
+              </g>
+              <g stroke="#E5EAEF" stroke-width="4">
+                <path d="M-10 105h420M170 -10v230M330 -10v230"/>
+              </g>
+              <path d="M-10 195 L180 60 L420 120" stroke="#CBDCE6" stroke-width="12" fill="none"/>
+              <g fill="#E4E9EE">
+                <rect x="20" y="16" width="52" height="30" rx="3"/><rect x="110" y="18" width="40" height="28" rx="3"/>
+                <rect x="272" y="20" width="56" height="26" rx="3"/><rect x="24" y="162" width="48" height="34" rx="3"/>
+                <rect x="276" y="160" width="60" height="36" rx="3"/>
+              </g>
+              <circle cx="200" cy="105" r="26" fill="#1D7EA8" opacity=".16"/>
+              <path d="M200 122s11-9.8 11-17.4a11 11 0 1 0-22 0c0 7.6 11 17.4 11 17.4z" fill="#0A1C2E"/>
+              <circle cx="200" cy="104" r="4.2" fill="#fff"/>
+            </svg>
+            <div class="map__foot">
+              <p>OceanGraphics · Ikeja, Lagos</p>
+              <a href="https://www.google.com/maps/search/?api=1&amp;query=Ikeja+Lagos+Nigeria" target="_blank" rel="noopener">Open in Google Maps</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= footer ================= -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <a class="brand" href="#top" aria-label="OceanGraphics home">
+          <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+            <rect width="32" height="32" rx="8" fill="#122B44"/>
+            <path d="M7 20c2.6 0 2.6-3 5.2-3s2.6 3 5.2 3 2.6-3 5.2-3c1.3 0 1.95.75 2.6 1.5" stroke="#1D7EA8" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+            <rect x="9" y="8" width="14" height="5" rx="1.4" fill="#fff"/>
+          </svg>
+          <span style="color:#fff">Ocean<i style="font-style:normal;color:#1D7EA8">Graphics</i></span>
+        </a>
+        <p class="footer__about">Professional Printing &amp; Branding Solutions.</p>
+        <div class="socials">
+          <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="OceanGraphics on Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.05 1.8.25 2.2.42.6.22 1 .48 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c0 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2 0-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c0-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.1A6.7 6.7 0 1 0 18.7 12 6.7 6.7 0 0 0 12 5.3zm0 11A4.3 4.3 0 1 1 16.3 12 4.3 4.3 0 0 1 12 16.3zm6.9-11.2a1.6 1.6 0 1 1-1.6-1.6 1.6 1.6 0 0 1 1.6 1.6z"/></svg>
+          </a>
+          <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="OceanGraphics on Facebook">
+            <svg viewBox="0 0 24 24"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.7c0-.9.3-1.6 1.6-1.6h1.7V4.2A22 22 0 0 0 14.3 4c-2.5 0-4.2 1.5-4.2 4.3v2.5H7.4V14h2.7v8z"/></svg>
+          </a>
+          <a href="https://wa.me/2348000000000" target="_blank" rel="noopener" aria-label="OceanGraphics on WhatsApp">
+            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.2s-1.2.3-4-1.6a11.3 11.3 0 0 1-3.5-4.2c-.4-.8-.7-1.7-.2-2.6a2 2 0 0 1 1.3-.9c.2 0 .4 0 .6.4l.8 1.9c.1.2 0 .4-.1.6l-.5.6c-.2.2-.3.4-.1.7a9.2 9.2 0 0 0 3.6 3c.3.2.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.3.4.5s0 .4-.3.6z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="#top">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#work">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Large Format</a></li>
+          <li><a href="#services">I.D Cards</a></li>
+          <li><a href="#services">UV Printing</a></li>
+          <li><a href="#services">Branding</a></li>
+          <li><a href="#services">Stickers &amp; Labels</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="tel:+2348000000000">+234 800 000 0000</a></li>
+          <li><a href="mailto:hello@oceangraphics.ng">hello@oceangraphics.ng</a></li>
+          <li>Ikeja, Lagos, Nigeria</li>
+          <li>Mon–Fri, 8am–6pm</li>
+          <li>Sat, 9am–4pm</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© 2026 OceanGraphics. All Rights Reserved.</span>
+      <span>Printing · Large Format · Branding · Lagos</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/2348156569027" target="_blank" rel="noopener" aria-label="Chat with OceanGraphics on WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.2s-1.2.3-4-1.6a11.3 11.3 0 0 1-3.5-4.2c-.4-.8-.7-1.7-.2-2.6a2 2 0 0 1 1.3-.9c.2 0 .4 0 .6.4l.8 1.9c.1.2 0 .4-.1.6l-.5.6c-.2.2-.3.4-.1.7a9.2 9.2 0 0 0 3.6 3c.3.2.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.3.4.5s0 .4-.3.6z"/></svg>
+  <span>WhatsApp</span>
+</a>
+
+<script>
+(function () {
+  "use strict";
+
+  var WHATSAPP_NUMBER = "2348156569027"; // change to the real business number
+
+  /* sticky nav shadow */
+  var nav = document.getElementById("nav");
+  var onScroll = function () {
+    nav.classList.toggle("is-stuck", window.scrollY > 8);
+  };
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
+
+  /* mobile menu */
+  var toggle = document.getElementById("navToggle");
+  var menu = document.getElementById("mobileMenu");
+  var closeMenu = function () {
+    nav.classList.remove("is-open");
+    menu.classList.remove("is-open");
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-label", "Open menu");
+  };
+  toggle.addEventListener("click", function () {
+    var open = menu.classList.toggle("is-open");
+    nav.classList.toggle("is-open", open);
+    toggle.setAttribute("aria-expanded", String(open));
+    toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  });
+  menu.addEventListener("click", function (e) {
+    if (e.target.closest("a")) closeMenu();
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeMenu();
+  });
+
+  /* active link highlighting */
+  var sections = ["top", "about", "services", "work", "process", "contact"]
+    .map(function (id) { return document.getElementById(id); })
+    .filter(Boolean);
+  var links = Array.prototype.slice.call(document.querySelectorAll(".nav__links a"));
+  if ("IntersectionObserver" in window) {
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        links.forEach(function (a) {
+          a.classList.toggle("is-active", a.getAttribute("href") === "#" + entry.target.id);
+        });
+      });
+    }, { rootMargin: "-45% 0px -50% 0px" });
+    sections.forEach(function (s) { spy.observe(s); });
+
+    /* scroll reveal */
+    var revealer = new IntersectionObserver(function (entries, obs) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-in");
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    document.querySelectorAll(".reveal").forEach(function (el, i) {
+      el.style.transitionDelay = (i % 3) * 70 + "ms";
+      revealer.observe(el);
+    });
+  } else {
+    document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("is-in"); });
+  }
+
+  /* portfolio filters */
+  var filters = Array.prototype.slice.call(document.querySelectorAll(".filter"));
+  var tiles = Array.prototype.slice.call(document.querySelectorAll(".tile"));
+  filters.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var cat = btn.dataset.filter;
+      filters.forEach(function (b) {
+        var on = b === btn;
+        b.classList.toggle("is-active", on);
+        b.setAttribute("aria-pressed", String(on));
+      });
+      tiles.forEach(function (tile) {
+        tile.classList.toggle("is-hidden", cat !== "all" && tile.dataset.cat !== cat);
+      });
+    });
+  });
+
+  /* file input label */
+  var fileInput = document.getElementById("design");
+  var fileLabel = document.getElementById("fileLabel");
+  fileInput.addEventListener("change", function () {
+    fileLabel.textContent = fileInput.files.length ? fileInput.files[0].name : "Choose a file";
+  });
+
+  /* quote form -> WhatsApp handoff */
+  var form = document.getElementById("quoteForm");
+  var note = document.getElementById("formNote");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var required = ["name", "email", "phone", "service", "details"];
+    var missing = required.filter(function (id) { return !document.getElementById(id).value.trim(); });
+    if (missing.length) {
+      note.textContent = "Fill in your name, email, phone, service and project details before sending.";
+      note.style.color = "#B3261E";
+      document.getElementById(missing[0]).focus();
+      return;
+    }
+    var msg =
+      "New quote request from the OceanGraphics website\n\n" +
+      "Name: " + document.getElementById("name").value.trim() + "\n" +
+      "Email: " + document.getElementById("email").value.trim() + "\n" +
+      "Phone: " + document.getElementById("phone").value.trim() + "\n" +
+      "Service: " + document.getElementById("service").value + "\n" +
+      "Details: " + document.getElementById("details").value.trim() +
+      (fileInput.files.length ? "\n\nFile to send: " + fileInput.files[0].name : "");
+    window.open("https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(msg), "_blank", "noopener");
+    note.style.color = "";
+    note.textContent = "Request opened in WhatsApp — attach your design file there and send.";
+  });
+})();
+</script>
+</body>
+</html>
