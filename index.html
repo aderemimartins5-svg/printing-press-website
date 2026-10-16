@@ -12,6 +12,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="Script.js"></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -23,351 +25,7 @@
   "openingHours": "Mo-Fr 08:00-18:00, Sa 09:00-16:00"
 }
 </script>
-<style>
-:root{
-  --navy:#0A1C2E;
-  --navy-soft:#122B44;
-  --charcoal:#2B3440;
-  --ink:#1B2533;
-  --muted:#5D6B7A;
-  --ocean:#1D7EA8;
-  --ocean-deep:#145E7F;
-  --ocean-tint:#EAF3F8;
-  --paper:#FFFFFF;
-  --paper-2:#F5F7F9;
-  --line:#E3E8ED;
-  --shadow-sm:0 1px 2px rgba(10,28,46,.06), 0 6px 18px rgba(10,28,46,.05);
-  --shadow-md:0 2px 6px rgba(10,28,46,.07), 0 18px 40px rgba(10,28,46,.08);
-  --r-lg:14px;
-  --r-md:10px;
-  --maxw:1180px;
-  --nav-h:74px;
-}
-*,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 12px);-webkit-text-size-adjust:100%}
-body{
-  margin:0;
-  background:var(--paper);
-  color:var(--ink);
-  font-family:"Inter",system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
-  font-size:17px;
-  line-height:1.65;
-  -webkit-font-smoothing:antialiased;
-}
-img,svg{max-width:100%;display:block}
-a{color:inherit}
-h1,h2,h3,h4{font-family:"Archivo","Inter",system-ui,sans-serif;margin:0;line-height:1.12;letter-spacing:-.02em;font-weight:700;color:var(--navy)}
-h1{font-size:clamp(2.2rem,5.4vw,3.85rem)}
-h2{font-size:clamp(1.75rem,3.6vw,2.6rem)}
-h3{font-size:1.16rem;letter-spacing:-.012em;font-weight:600}
-p{margin:0 0 1rem}
-.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px}
-.section{padding:96px 0}
-.section--tight{padding:72px 0}
-.section--paper{background:var(--paper-2)}
-.lede{color:var(--muted);font-size:1.06rem;max-width:62ch}
-.section-head{max-width:66ch;margin-bottom:48px}
-.section-head p{margin-top:16px}
 
-/* ---------- buttons ---------- */
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
-  font-family:"Inter",sans-serif;font-weight:600;font-size:.98rem;
-  padding:.85rem 1.5rem;border-radius:999px;border:1px solid transparent;
-  text-decoration:none;cursor:pointer;
-  transition:background-color .22s ease, color .22s ease, border-color .22s ease, transform .22s ease, box-shadow .22s ease;
-}
-.btn--primary{background:var(--ocean);color:#fff;box-shadow:0 8px 20px rgba(29,126,168,.24)}
-.btn--primary:hover{background:var(--ocean-deep);transform:translateY(-1px)}
-.btn--navy{background:var(--navy);color:#fff}
-.btn--navy:hover{background:var(--navy-soft);transform:translateY(-1px)}
-.btn--ghost{border-color:rgba(255,255,255,.34);color:#fff}
-.btn--ghost:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.6)}
-.btn--outline{border-color:var(--line);color:var(--navy);background:#fff}
-.btn--outline:hover{border-color:var(--ocean);color:var(--ocean)}
-.btn--wide{width:100%}
-:where(a,button,input,select,textarea,.chip,.filter):focus-visible{
-  outline:3px solid var(--ocean);outline-offset:3px;border-radius:6px;
-}
-
-/* ---------- nav ---------- */
-.nav{
-  position:fixed;inset:0 0 auto 0;z-index:80;height:var(--nav-h);
-  background:rgba(255,255,255,.86);backdrop-filter:blur(12px);
-  border-bottom:1px solid transparent;transition:border-color .25s ease, box-shadow .25s ease;
-}
-.nav.is-stuck{border-bottom-color:var(--line);box-shadow:0 6px 24px rgba(10,28,46,.06)}
-.nav__inner{height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:"Archivo",sans-serif;font-weight:700;font-size:1.18rem;letter-spacing:-.02em;color:var(--navy)}
-.brand__mark{width:32px;height:32px;flex:0 0 32px}
-.brand span i{font-style:normal;color:var(--ocean)}
-.nav__links{display:flex;align-items:center;gap:30px;list-style:none;margin:0;padding:0}
-.nav__links a{
-  text-decoration:none;font-size:.95rem;font-weight:500;color:var(--charcoal);
-  position:relative;padding:6px 0;transition:color .2s ease;
-}
-.nav__links a::after{
-  content:"";position:absolute;left:0;right:100%;bottom:0;height:2px;background:var(--ocean);
-  transition:right .28s ease;
-}
-.nav__links a:hover{color:var(--navy)}
-.nav__links a:hover::after,.nav__links a.is-active::after{right:0}
-.nav__cta{display:flex;align-items:center;gap:12px}
-.nav__toggle{
-  display:none;width:44px;height:44px;border:1px solid var(--line);background:#fff;border-radius:10px;
-  align-items:center;justify-content:center;cursor:pointer;
-}
-.nav__toggle span{display:block;width:18px;height:1.8px;background:var(--navy);border-radius:2px;position:relative;transition:transform .25s ease, background-color .2s ease}
-.nav__toggle span::before,.nav__toggle span::after{content:"";position:absolute;left:0;width:18px;height:1.8px;background:var(--navy);border-radius:2px;transition:transform .25s ease, opacity .2s ease}
-.nav__toggle span::before{top:-6px}
-.nav__toggle span::after{top:6px}
-.nav.is-open .nav__toggle span{background:transparent}
-.nav.is-open .nav__toggle span::before{transform:translateY(6px) rotate(45deg)}
-.nav.is-open .nav__toggle span::after{transform:translateY(-6px) rotate(-45deg)}
-.mobile-menu{
-  position:fixed;top:var(--nav-h);left:0;right:0;z-index:79;
-  background:#fff;border-bottom:1px solid var(--line);
-  transform:translateY(-8px);opacity:0;visibility:hidden;pointer-events:none;
-  transition:opacity .22s ease, transform .22s ease, visibility .22s;
-  box-shadow:var(--shadow-md);
-}
-.mobile-menu.is-open{opacity:1;transform:none;visibility:visible;pointer-events:auto}
-.mobile-menu ul{list-style:none;margin:0;padding:12px 24px 22px}
-.mobile-menu li + li{border-top:1px solid var(--line)}
-.mobile-menu a{display:block;padding:15px 0;text-decoration:none;font-weight:500;color:var(--charcoal)}
-.mobile-menu .btn{margin-top:16px}
-
-/* ---------- hero ---------- */
-.hero{
-  position:relative;background:var(--navy);color:#fff;overflow:hidden;
-  padding:calc(var(--nav-h) + 84px) 0 92px;
-}
-.hero::before{
-  content:"";position:absolute;inset:0;
-  background:radial-gradient(1100px 620px at 78% 18%, rgba(29,126,168,.30), transparent 62%);
-}
-.hero__grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
-.hero h1{color:#fff;max-width:14ch}
-.hero__text{max-width:52ch;color:rgba(255,255,255,.76);font-size:1.08rem;margin:26px 0 34px}
-.hero__actions{display:flex;flex-wrap:wrap;gap:14px}
-.hero__trust{
-  display:flex;flex-wrap:wrap;gap:10px 26px;align-items:center;
-  margin-top:44px;padding-top:26px;border-top:1px solid rgba(255,255,255,.14);
-  font-size:.92rem;color:rgba(255,255,255,.66);
-}
-.hero__trust li{list-style:none;display:flex;align-items:center;gap:9px}
-.hero__trust ul{display:contents}
-.dot{width:5px;height:5px;border-radius:50%;background:var(--ocean);flex:0 0 5px}
-.hero__art{border-radius:18px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.35);background:#fff}
-.hero__caption{
-  margin-top:14px;font-size:.85rem;color:rgba(255,255,255,.55);
-  display:flex;justify-content:space-between;gap:16px;
-}
-
-/* ---------- about ---------- */
-.about{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
-.about__art{border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-md);background:var(--paper-2)}
-.about h2{max-width:12ch}
-.pill-list{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:14px}
-.pill-list li{display:flex;gap:13px;align-items:flex-start;font-size:.99rem}
-.tick{flex:0 0 22px;width:22px;height:22px;margin-top:2px;border-radius:50%;background:var(--ocean-tint);display:grid;place-items:center}
-.tick svg{width:11px;height:11px;stroke:var(--ocean-deep);stroke-width:2.4;fill:none}
-
-/* ---------- services ---------- */
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-.card{
-  background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;
-  display:flex;flex-direction:column;
-  transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
-}
-.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:#D6DEE6}
-.card__art{background:var(--paper-2);border-bottom:1px solid var(--line)}
-.card__body{padding:26px 26px 28px;display:flex;flex-direction:column;flex:1}
-.card__body p{color:var(--muted);font-size:.97rem;margin:11px 0 20px}
-.card__link{
-  margin-top:auto;text-decoration:none;font-weight:600;font-size:.93rem;color:var(--ocean-deep);
-  display:inline-flex;align-items:center;gap:8px;align-self:flex-start;
-}
-.card__link svg{width:14px;height:14px;stroke:currentColor;stroke-width:2;fill:none;transition:transform .25s ease}
-.card:hover .card__link svg{transform:translateX(4px)}
-
-/* ---------- why ---------- */
-.why{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--line);border-radius:var(--r-lg);background:#fff;overflow:hidden}
-.why__item{padding:34px 28px;border-right:1px solid var(--line)}
-.why__item:last-child{border-right:0}
-.why__icon{width:34px;height:34px;stroke:var(--ocean);stroke-width:1.5;fill:none;margin-bottom:20px}
-.why__item h3{font-size:1.03rem}
-.why__item p{font-size:.92rem;color:var(--muted);margin:9px 0 0}
-
-/* ---------- portfolio ---------- */
-.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px}
-.filter{
-  border:1px solid var(--line);background:#fff;color:var(--charcoal);
-  font:inherit;font-size:.92rem;font-weight:500;padding:.5rem 1.05rem;border-radius:999px;cursor:pointer;
-  transition:all .2s ease;
-}
-.filter:hover{border-color:var(--ocean);color:var(--ocean-deep)}
-.filter.is-active{background:var(--navy);border-color:var(--navy);color:#fff}
-.masonry{columns:3;column-gap:22px}
-.tile{
-  break-inside:avoid;margin:0 0 22px;position:relative;overflow:hidden;border-radius:var(--r-md);
-  border:1px solid var(--line);background:#fff;
-  transition:opacity .3s ease, transform .3s ease, box-shadow .3s ease;
-}
-.tile:hover{box-shadow:var(--shadow-md)}
-.tile svg{transition:transform .5s cubic-bezier(.2,.7,.3,1)}
-.tile:hover svg{transform:scale(1.045)}
-.tile__meta{
-  position:absolute;inset:auto 0 0 0;padding:44px 18px 16px;color:#fff;
-  background:linear-gradient(to top, rgba(10,28,46,.9), rgba(10,28,46,0));
-  opacity:0;transform:translateY(8px);transition:opacity .3s ease, transform .3s ease;
-}
-.tile:hover .tile__meta,.tile:focus-within .tile__meta{opacity:1;transform:none}
-.tile__meta strong{display:block;font-family:"Archivo",sans-serif;font-size:1rem;color:#fff}
-.tile__meta span{font-size:.84rem;color:rgba(255,255,255,.7)}
-.tile.is-hidden{display:none}
-
-/* ---------- process ---------- */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;counter-reset:step}
-.step{position:relative;padding-top:30px;border-top:2px solid var(--line)}
-.step::before{
-  content:"";position:absolute;top:-2px;left:0;width:34px;height:2px;background:var(--ocean);
-}
-.step__num{font-family:"Archivo",sans-serif;font-size:.95rem;font-weight:600;color:var(--ocean);letter-spacing:.04em}
-.step h3{margin:12px 0 10px}
-.step p{color:var(--muted);font-size:.95rem;margin:0}
-
-/* ---------- cta band ---------- */
-.cta{background:var(--navy);color:#fff;position:relative;overflow:hidden}
-.cta::after{
-  content:"";position:absolute;inset:0;
-  background:radial-gradient(760px 420px at 12% 110%, rgba(29,126,168,.32), transparent 60%);
-}
-.cta__inner{position:relative;text-align:center;max-width:44ch;margin:0 auto}
-.cta h2{color:#fff}
-.cta p{color:rgba(255,255,255,.72);margin:18px 0 32px}
-
-/* ---------- contact ---------- */
-.contact{display:grid;grid-template-columns:1.12fr .88fr;gap:56px;align-items:start}
-.form-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:34px;box-shadow:var(--shadow-sm)}
-.field{margin-bottom:18px}
-.field label{display:block;font-size:.88rem;font-weight:600;color:var(--charcoal);margin-bottom:7px}
-.field input,.field select,.field textarea{
-  width:100%;font:inherit;font-size:.97rem;color:var(--ink);
-  padding:.8rem .95rem;border:1px solid var(--line);border-radius:var(--r-md);background:#fff;
-  transition:border-color .2s ease, box-shadow .2s ease;
-}
-.field textarea{min-height:128px;resize:vertical}
-.field input:focus,.field select:focus,.field textarea:focus{
-  outline:none;border-color:var(--ocean);box-shadow:0 0 0 4px rgba(29,126,168,.13);
-}
-.field-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.file-drop{
-  border:1.5px dashed #C9D4DE;border-radius:var(--r-md);padding:20px;text-align:center;
-  background:var(--paper-2);cursor:pointer;display:block;transition:border-color .2s ease, background-color .2s ease;
-}
-.file-drop:hover{border-color:var(--ocean);background:var(--ocean-tint)}
-.file-drop input{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
-.file-drop strong{display:block;font-size:.93rem;color:var(--navy);font-weight:600}
-.file-drop span{font-size:.84rem;color:var(--muted)}
-.form-note{font-size:.85rem;color:var(--muted);margin:16px 0 0;text-align:center}
-.info-list{list-style:none;margin:0;padding:0;display:grid;gap:14px}
-.info-item{
-  display:flex;gap:15px;align-items:flex-start;background:#fff;border:1px solid var(--line);
-  border-radius:var(--r-md);padding:18px 20px;text-decoration:none;
-  transition:border-color .2s ease, transform .2s ease;
-}
-a.info-item:hover{border-color:var(--ocean);transform:translateX(3px)}
-.info-item svg{width:20px;height:20px;flex:0 0 20px;margin-top:3px;stroke:var(--ocean);stroke-width:1.6;fill:none}
-.info-item h4{font-family:"Inter",sans-serif;font-size:.83rem;font-weight:600;color:var(--muted);margin:0 0 3px;letter-spacing:.01em}
-.info-item p{margin:0;font-size:1rem;color:var(--navy);font-weight:500}
-.map{
-  margin-top:22px;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;background:#fff;
-}
-.map__foot{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 20px;border-top:1px solid var(--line);flex-wrap:wrap}
-.map__foot p{margin:0;font-size:.92rem;color:var(--muted)}
-.map__foot a{font-size:.92rem;font-weight:600;color:var(--ocean-deep);text-decoration:none}
-.map__foot a:hover{text-decoration:underline}
-
-/* ---------- footer ---------- */
-.footer{background:var(--navy);color:rgba(255,255,255,.66);padding:72px 0 30px;font-size:.95rem}
-.footer__grid{display:grid;grid-template-columns:1.4fr .8fr .8fr 1fr;gap:44px}
-.footer h4{font-family:"Archivo",sans-serif;color:#fff;font-size:.98rem;font-weight:600;margin:0 0 18px}
-.footer a{color:rgba(255,255,255,.66);text-decoration:none;transition:color .2s ease}
-.footer a:hover{color:#fff}
-.footer ul{list-style:none;margin:0;padding:0;display:grid;gap:11px}
-.footer .brand{color:#fff;font-size:1.22rem}
-.footer__about{max-width:34ch;margin:18px 0 0;color:rgba(255,255,255,.6)}
-.socials{display:flex;gap:11px;margin-top:20px}
-.socials a{
-  width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.18);
-  display:grid;place-items:center;transition:background-color .2s ease, border-color .2s ease;
-}
-.socials a:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.4)}
-.socials svg{width:17px;height:17px;fill:#fff}
-.footer__bottom{
-  margin-top:54px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12);
-  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.88rem;color:rgba(255,255,255,.5);
-}
-
-/* ---------- whatsapp float ---------- */
-.wa{
-  position:fixed;right:20px;bottom:20px;z-index:70;
-  display:flex;align-items:center;gap:10px;
-  background:#128C7E;color:#fff;text-decoration:none;font-weight:600;font-size:.93rem;
-  padding:.8rem 1.2rem;border-radius:999px;box-shadow:0 12px 30px rgba(18,140,126,.4);
-  transition:transform .22s ease, background-color .22s ease;
-}
-.wa:hover{transform:translateY(-2px);background:#0F7A6C}
-.wa svg{width:20px;height:20px;fill:#fff}
-
-/* ---------- reveal ---------- */
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.3,1)}
-.reveal.is-in{opacity:1;transform:none}
-
-/* ---------- responsive ---------- */
-@media (max-width:1040px){
-  .hero__grid{grid-template-columns:1fr;gap:46px}
-  .hero__art{order:-1}
-  .about{grid-template-columns:1fr;gap:42px}
-  .grid-3{grid-template-columns:repeat(2,1fr)}
-  .why{grid-template-columns:repeat(2,1fr)}
-  .why__item{border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .why__item:nth-child(2n){border-right:0}
-  .why__item:last-child{grid-column:1/-1;border-bottom:0}
-  .steps{grid-template-columns:repeat(2,1fr);gap:34px 26px}
-  .masonry{columns:2}
-  .contact{grid-template-columns:1fr;gap:38px}
-}
-@media (max-width:860px){
-  .nav__links,.nav__cta .btn{display:none}
-  .nav__toggle{display:flex}
-  .footer__grid{grid-template-columns:1fr 1fr;gap:38px}
-}
-@media (max-width:640px){
-  body{font-size:16px}
-  .section{padding:68px 0}
-  .section--tight{padding:56px 0}
-  .hero{padding:calc(var(--nav-h) + 52px) 0 68px}
-  .wrap{padding:0 20px}
-  .grid-3{grid-template-columns:1fr}
-  .why{grid-template-columns:1fr}
-  .why__item{border-right:0}
-  .steps{grid-template-columns:1fr}
-  .masonry{columns:1}
-  .field-row{grid-template-columns:1fr}
-  .form-card{padding:24px 20px}
-  .footer__grid{grid-template-columns:1fr}
-  .hero__actions .btn{flex:1 1 auto}
-  .wa span{display:none}
-  .wa{padding:.9rem;border-radius:50%}
-}
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  *,*::before,*::after{animation-duration:.001ms !important;transition-duration:.001ms !important}
-  .reveal{opacity:1;transform:none}
-}
-</style>
 </head>
 <body>
 
@@ -885,7 +543,7 @@ a.info-item:hover{border-color:var(--ocean);transform:translateX(3px)}
           </ul>
 
           <div class="map">
-            <svg viewBox="0 0 400 210" role="img" aria-label="Map showing the OceanGraphics location in Ikeja, Lagos">
+            <svg viewBox="0 0 400 210" role="img" aria-label="Map showing the OceanGraphics location in Balogun street, ladipo msuhin, Lagos">
               <rect width="400" height="210" fill="#EEF2F5"/>
               <g stroke="#DCE3E9" stroke-width="10">
                 <path d="M-10 60h420M-10 150h420M90 -10v230M250 -10v230"/>
@@ -904,8 +562,8 @@ a.info-item:hover{border-color:var(--ocean);transform:translateX(3px)}
               <circle cx="200" cy="104" r="4.2" fill="#fff"/>
             </svg>
             <div class="map__foot">
-              <p>OceanGraphics · Ikeja, Lagos</p>
-              <a href="https://www.google.com/maps/search/?api=1&amp;query=Ikeja+Lagos+Nigeria" target="_blank" rel="noopener">Open in Google Maps</a>
+              <p>OceanGraphics · Balogun Street, Ladipo Musahin, Lagos</p>
+              <a href="https://maps.app.goo.gl/yLgQCMpwXHgp3Pny5" target="_blank" rel="noopener">Open in Google Maps</a>
             </div>
           </div>
         </div>
@@ -935,7 +593,7 @@ a.info-item:hover{border-color:var(--ocean);transform:translateX(3px)}
           <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="OceanGraphics on Facebook">
             <svg viewBox="0 0 24 24"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.7c0-.9.3-1.6 1.6-1.6h1.7V4.2A22 22 0 0 0 14.3 4c-2.5 0-4.2 1.5-4.2 4.3v2.5H7.4V14h2.7v8z"/></svg>
           </a>
-          <a href="https://wa.me/2348000000000" target="_blank" rel="noopener" aria-label="OceanGraphics on WhatsApp">
+          <a href="https://wa.me/2349016173973" target="_blank" rel="noopener" aria-label="OceanGraphics on WhatsApp">
             <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.2s-1.2.3-4-1.6a11.3 11.3 0 0 1-3.5-4.2c-.4-.8-.7-1.7-.2-2.6a2 2 0 0 1 1.3-.9c.2 0 .4 0 .6.4l.8 1.9c.1.2 0 .4-.1.6l-.5.6c-.2.2-.3.4-.1.7a9.2 9.2 0 0 0 3.6 3c.3.2.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.3.4.5s0 .4-.3.6z"/></svg>
           </a>
         </div>
@@ -966,11 +624,10 @@ a.info-item:hover{border-color:var(--ocean);transform:translateX(3px)}
       <div>
         <h4>Get in touch</h4>
         <ul>
-          <li><a href="tel:+2348000000000">+234 800 000 0000</a></li>
+          <li><a href="tel:+2349016173973">+234 901 617 3973</a></li>
           <li><a href="mailto:hello@oceangraphics.ng">hello@oceangraphics.ng</a></li>
-          <li>Ikeja, Lagos, Nigeria</li>
-          <li>Mon–Fri, 8am–6pm</li>
-          <li>Sat, 9am–4pm</li>
+          <li>Mushin, Lagos, Nigeria</li>
+          <li>Mon–Sat, 9am–6pm</li>
         </ul>
       </div>
     </div>
@@ -982,130 +639,11 @@ a.info-item:hover{border-color:var(--ocean);transform:translateX(3px)}
   </div>
 </footer>
 
-<a class="wa" href="https://wa.me/2348156569027" target="_blank" rel="noopener" aria-label="Chat with OceanGraphics on WhatsApp">
+<a class="wa" href="https://wa.me/2349016173973" target="_blank" rel="noopener" aria-label="Chat with OceanGraphics on WhatsApp">
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.2s-1.2.3-4-1.6a11.3 11.3 0 0 1-3.5-4.2c-.4-.8-.7-1.7-.2-2.6a2 2 0 0 1 1.3-.9c.2 0 .4 0 .6.4l.8 1.9c.1.2 0 .4-.1.6l-.5.6c-.2.2-.3.4-.1.7a9.2 9.2 0 0 0 3.6 3c.3.2.5.1.7-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.3.4.5s0 .4-.3.6z"/></svg>
   <span>WhatsApp</span>
 </a>
 
-<script>
-(function () {
-  "use strict";
 
-  var WHATSAPP_NUMBER = "2348156569027"; // change to the real business number
-
-  /* sticky nav shadow */
-  var nav = document.getElementById("nav");
-  var onScroll = function () {
-    nav.classList.toggle("is-stuck", window.scrollY > 8);
-  };
-  onScroll();
-  window.addEventListener("scroll", onScroll, { passive: true });
-
-  /* mobile menu */
-  var toggle = document.getElementById("navToggle");
-  var menu = document.getElementById("mobileMenu");
-  var closeMenu = function () {
-    nav.classList.remove("is-open");
-    menu.classList.remove("is-open");
-    toggle.setAttribute("aria-expanded", "false");
-    toggle.setAttribute("aria-label", "Open menu");
-  };
-  toggle.addEventListener("click", function () {
-    var open = menu.classList.toggle("is-open");
-    nav.classList.toggle("is-open", open);
-    toggle.setAttribute("aria-expanded", String(open));
-    toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
-  });
-  menu.addEventListener("click", function (e) {
-    if (e.target.closest("a")) closeMenu();
-  });
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") closeMenu();
-  });
-
-  /* active link highlighting */
-  var sections = ["top", "about", "services", "work", "process", "contact"]
-    .map(function (id) { return document.getElementById(id); })
-    .filter(Boolean);
-  var links = Array.prototype.slice.call(document.querySelectorAll(".nav__links a"));
-  if ("IntersectionObserver" in window) {
-    var spy = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        links.forEach(function (a) {
-          a.classList.toggle("is-active", a.getAttribute("href") === "#" + entry.target.id);
-        });
-      });
-    }, { rootMargin: "-45% 0px -50% 0px" });
-    sections.forEach(function (s) { spy.observe(s); });
-
-    /* scroll reveal */
-    var revealer = new IntersectionObserver(function (entries, obs) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-in");
-          obs.unobserve(entry.target);
-        }
-      });
-    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
-    document.querySelectorAll(".reveal").forEach(function (el, i) {
-      el.style.transitionDelay = (i % 3) * 70 + "ms";
-      revealer.observe(el);
-    });
-  } else {
-    document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("is-in"); });
-  }
-
-  /* portfolio filters */
-  var filters = Array.prototype.slice.call(document.querySelectorAll(".filter"));
-  var tiles = Array.prototype.slice.call(document.querySelectorAll(".tile"));
-  filters.forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      var cat = btn.dataset.filter;
-      filters.forEach(function (b) {
-        var on = b === btn;
-        b.classList.toggle("is-active", on);
-        b.setAttribute("aria-pressed", String(on));
-      });
-      tiles.forEach(function (tile) {
-        tile.classList.toggle("is-hidden", cat !== "all" && tile.dataset.cat !== cat);
-      });
-    });
-  });
-
-  /* file input label */
-  var fileInput = document.getElementById("design");
-  var fileLabel = document.getElementById("fileLabel");
-  fileInput.addEventListener("change", function () {
-    fileLabel.textContent = fileInput.files.length ? fileInput.files[0].name : "Choose a file";
-  });
-
-  /* quote form -> WhatsApp handoff */
-  var form = document.getElementById("quoteForm");
-  var note = document.getElementById("formNote");
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    var required = ["name", "email", "phone", "service", "details"];
-    var missing = required.filter(function (id) { return !document.getElementById(id).value.trim(); });
-    if (missing.length) {
-      note.textContent = "Fill in your name, email, phone, service and project details before sending.";
-      note.style.color = "#B3261E";
-      document.getElementById(missing[0]).focus();
-      return;
-    }
-    var msg =
-      "New quote request from the OceanGraphics website\n\n" +
-      "Name: " + document.getElementById("name").value.trim() + "\n" +
-      "Email: " + document.getElementById("email").value.trim() + "\n" +
-      "Phone: " + document.getElementById("phone").value.trim() + "\n" +
-      "Service: " + document.getElementById("service").value + "\n" +
-      "Details: " + document.getElementById("details").value.trim() +
-      (fileInput.files.length ? "\n\nFile to send: " + fileInput.files[0].name : "");
-    window.open("https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(msg), "_blank", "noopener");
-    note.style.color = "";
-    note.textContent = "Request opened in WhatsApp — attach your design file there and send.";
-  });
-})();
-</script>
 </body>
 </html>
